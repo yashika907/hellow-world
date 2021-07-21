@@ -2,4 +2,4 @@
 
 This is my first repository in Github.
 
-I'm linux administrator.
+As, I'm a novice, I'm trying to exlore and learn more about Github
