@@ -1,5 +1,25 @@
+
 # hello-world
 
-This is my first repository in Github.
+#script to download & activate & run wp-sweep plugin on wordpress
+#!/bin/bash
 
-I'm a novice. I'm trying to explore and learn more about Github
+WP="/usr/local/bin/wp --allow-root --skip-themes --skip-plugins"
+
+read -p "Activate wp-sweep? (y/n) " REP
+if [ "$REP" = "y" ]; then
+ echo "INSTALLING WP-SWEEP"
+${WP} plugin install wp-sweep 
+ echo " "
+ echo "ACTIVATING WP-SWEEP"
+${WP} plugin activate wp-sweep
+  echo " "
+  echo "RUNNING sweep --all"
+/usr/local/bin/wp --allow-root sweep --all
+  echo " "  
+echo "DEACTIVATING WP-SWEEP"
+${WP} plugin deactivate wp-sweep
+else
+  echo "wp-sweep NoT Activated"
+fi
+
