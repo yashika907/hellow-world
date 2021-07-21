@@ -23,3 +23,5 @@ else
   echo "wp-sweep NoT Activated"
 fi
 
+
+#script ends
